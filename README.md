@@ -30,5 +30,5 @@ About pandoc, consult [Pandoc - About pandoc](http://pandoc.org/) for more infor
 Contents on this repository are dedicated to [![CC0 public domain](http://i.creativecommons.org/p/zero/1.0/80x15.png "CC0 public domain")](https://creativecommons.org/publicdomain/zero/1.0/).
 No rights reserved.
 
-License for distributed Docker images follows one of [Debianu Project](https://www.debian.org/legal/licenses/), [TeXLive](https://www.tug.org/texlive/copying.html),
+License for distributed Docker images follows one of [Debian Project](https://www.debian.org/legal/licenses/), [TeXLive](https://www.tug.org/texlive/copying.html),
 [Pandoc](https://github.com/jgm/pandoc/blob/master/COPYING.md) and its dependencies.
