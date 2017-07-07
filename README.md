@@ -3,13 +3,15 @@
 [![License](https://img.shields.io/github/license/uchida/docker-pandoc.svg?maxAge=2592000)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
 [![MicroBadger](https://images.microbadger.com/badges/image/auchida/pandoc.svg)](http://microbadger.com/images/auchida/pandoc)
 
-docker image with pandoc and texlive, including luatexja and bxjscls etc
+docker image with pandoc and texlive, including luatexja and bxjscls to generate Japanese PDF files,
+optionally Noto Sans/Serif CJK JP fonts are available `noto-cjk-jp` tag.
 
 Docker image is available as [auchida/pandoc](https://hub.docker.com/r/auchida/pandoc/) in Docker Hub.
 
 ## Image tags
 
 - `latest`
+- `noto-cjk-jp`
 
 ## Usage
 
@@ -31,4 +33,4 @@ Contents on this repository are dedicated to [![CC0 public domain](http://i.crea
 No rights reserved.
 
 License for distributed Docker images follows one of [Debian Project](https://www.debian.org/legal/licenses/), [TeXLive](https://www.tug.org/texlive/copying.html),
-[Pandoc](https://github.com/jgm/pandoc/blob/master/COPYING.md) and its dependencies.
+[Noto CJK fonts](https://github.com/googlei18n/noto-cjk/blob/master/LICENSE), [Pandoc](https://github.com/jgm/pandoc/blob/master/COPYING.md) and its dependencies.
