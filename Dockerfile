@@ -6,7 +6,7 @@ RUN apt-get update\
  && tlmgr install collection-latexrecommended ec lm zapfding upquote\
  && tlmgr install luatexja pbibtex-base ipaex bxbase bxjscls zxjatype\
  && tlmgr install collection-xetex collection-luatex adobemapping\
- && tlmgr install everyhook svn-prov
+ && tlmgr install everyhook svn-prov mathpazo
 ENV PANDOC_DOWNLOAD_SUM db828cbab2a6d0d33f3754c4061a844ae2d1f0a01cbb12c512ef109117595dd2
 RUN apt-get update\
  && apt-get install --no-install-recommends -y curl=7.* ca-certificates=*\
