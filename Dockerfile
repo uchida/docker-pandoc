@@ -1,4 +1,4 @@
-FROM auchida/texlive:latest
+FROM auchida/texlive:2018
 MAINTAINER Akihiro Uchida <uchida@turbare.net>
 RUN apt-get update\
  && apt-get install --no-install-recommends -y fontconfig=* fonts-ipaexfont=*\
