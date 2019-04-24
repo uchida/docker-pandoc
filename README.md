@@ -10,7 +10,7 @@ Docker image is available as [auchida/pandoc](https://hub.docker.com/r/auchida/p
 
 ## Image tags
 
-- `latest`
+- `latest`, `base`
 - `noto-cjk-jp`
 
 ## Usage
