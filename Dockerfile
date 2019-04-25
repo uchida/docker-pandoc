@@ -4,7 +4,7 @@ RUN apt-get update\
  && apt-get install --no-install-recommends -y fontconfig=* fonts-ipaexfont=*\
  && rm -rf /var/lib/apt/lists/*\
  && tlmgr install collection-latexrecommended ec lm lm-math zapfding upquote\
- && tlmgr install luatexja pbibtex-base ipaex bxbase bxjscls zxjatype\
+ && tlmgr install luatexja pbibtex-base ipaex bxbase bxjscls zxjatype zxjafont\
  && tlmgr install collection-xetex collection-luatex adobemapping\
  && tlmgr install everyhook svn-prov mathpazo
 ENV PANDOC_DOWNLOAD_SUM 5efca1cd0a93824110246df1a2ed4aa676daf596d75554e1eea80dc217272b27
