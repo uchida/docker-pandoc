@@ -48,7 +48,7 @@ or
 $ docker run -v $PWD:/opt/docs auchida/pandoc:noto-cjk-jp pandoc -V documentclass=bxjsarticle -V classoption=pandoc,standard,jafont=noto --pdf-engine=xelatex -o docs.pdf docs.md
 ```
 
-If you want to use lualatex and ltjs class, instead of bxjsarticle, put `-H|--include-in-header` option with a following file:
+If you want to use LuaLaTeX and ltjs classes, instead of bxjs classes, put `-H|--include-in-header` option with a following file:
 
 ```latex
 \usepackage[noto-otf]{luatexja-preset}
@@ -59,6 +59,8 @@ If you want to use lualatex and ltjs class, instead of bxjsarticle, put `-H|--in
 ```console
 $ docker run -v $PWD:/opt/docs auchida/pandoc:noto-jp pandoc -V documentclass=bxjsarticle -V classoption=pandoc,standard,jafont=noto-jp --pdf-engine=xelatex -o docs.pdf docs.md
 ```
+
+One may use `noto-jp` with LuaLaTeX by `-H|--include-in-header` option with `\set*jfont` commands in the `luatexja-fontspec` package.
 
 ## License
 
