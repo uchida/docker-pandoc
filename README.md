@@ -16,13 +16,13 @@ Docker image is available as [auchida/pandoc](https://hub.docker.com/r/auchida/p
 ## Usage
 
 ```console
-$ docker run -v $PWD:/opt/docs auchida/pandoc pandoc -f markdown -V documentclass=ltjsarticle --latex-engine=lualatex -o docs.pdf docs.md
+$ docker run -v $PWD:/opt/docs auchida/pandoc pandoc -f markdown -V documentclass=ltjsarticle --pdf-engine=lualatex -o docs.pdf docs.md
 ```
 
 or
 
 ```console
-$ docker run -v $PWD:/opt/docs auchida/pandoc pandoc -f markdown -V documentclass=bxjsarticle -V classoption=pandoc,standard --latex-engine=xelatex -o docs.pdf docs.md
+$ docker run -v $PWD:/opt/docs auchida/pandoc pandoc -f markdown -V documentclass=bxjsarticle -V classoption=pandoc,standard --pdf-engine=xelatex -o docs.pdf docs.md
 ```
 
 About pandoc, consult [Pandoc - About pandoc](http://pandoc.org/) for more information.
