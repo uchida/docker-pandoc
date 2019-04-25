@@ -11,6 +11,7 @@ RUN apt-get update\
  && unzip -d /usr/local/share/fonts/notosansjp/ NotoSansCJKjp-hinted.zip\
  && rm NotoSansCJKjp-hinted.zip NotoSerifCJKjp-hinted.zip\
  && ln -s /etc/fonts/conf.avail/75-fonts-noto-cjk-jp.conf /etc/fonts/conf.d/\
- && fc-cache -fv
+ && fc-cache -fv\
+ && luaotfload-tool --update
 WORKDIR /opt/docs
 CMD ["/bin/bash"]
