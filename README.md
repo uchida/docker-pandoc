@@ -39,7 +39,7 @@ About pandoc, consult [Pandoc - About pandoc](http://pandoc.org/) for more infor
 
 
 ```console
-docker run -v $PWD:/opt/docs auchida/pandoc:noto-cjk-jp pandoc -V documentclass=bxjsarticle -V classoption=pandoc,standard,jafont=noto-otf --pdf-engine=lualatex -o docs.pdf docs.md
+$ docker run -v $PWD:/opt/docs auchida/pandoc:noto-cjk-jp pandoc -V documentclass=bxjsarticle -V classoption=pandoc,standard,jafont=noto-otf --pdf-engine=lualatex -o docs.pdf docs.md
 ```
 
 or
