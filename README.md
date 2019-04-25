@@ -12,6 +12,7 @@ Docker image is available as [auchida/pandoc](https://hub.docker.com/r/auchida/p
 
 - `latest`, `base`
 - `noto-cjk-jp`
+- `noto-jp`
 
 ## Usage
 
@@ -24,6 +25,9 @@ or
 ```console
 $ docker run -v $PWD:/opt/docs auchida/pandoc pandoc -f markdown -V documentclass=bxjsarticle -V classoption=pandoc,standard --pdf-engine=xelatex -o docs.pdf docs.md
 ```
+
+- `noto-cjk-jp`: set `-V "CJKmainfont=Noto Serif CJK JP" -V "CJKsansfont=Noto Sans CJK JP" -V "CJKmonofont=Noto Sans Mono CJK JP"`
+- `noto-jp`: set `-V "CJKmainfont=Noto Serif JP" -V "CJKsansfont=Noto Sans JP" -V "CJKmonofont=Noto Sans Mono JP"`
 
 About pandoc, consult [Pandoc - About pandoc](http://pandoc.org/) for more information.
 
