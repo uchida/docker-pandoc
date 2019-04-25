@@ -1,7 +1,6 @@
 # docker-pandoc
 
 [![License](https://img.shields.io/github/license/uchida/docker-pandoc.svg?maxAge=2592000)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
-[![MicroBadger](https://images.microbadger.com/badges/image/auchida/pandoc.svg)](http://microbadger.com/images/auchida/pandoc)
 
 docker image with pandoc and texlive, including luatexja and bxjscls to generate Japanese PDF files.
 Optionally Noto Sans/Serif fonts are available `noto-jp` and `noto-cjk-jp` tag.
