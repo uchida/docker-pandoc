@@ -6,7 +6,7 @@
 docker image with pandoc and texlive, including luatexja and bxjscls to generate Japanese PDF files.
 Optionally Noto Sans/Serif fonts are available `noto-jp` and `noto-cjk-jp` tag.
 
-- `noto-cjk` uses language-specific OpenType version of Noto fonts.
+- `noto-cjk-jp` uses language-specific OpenType version of Noto fonts.
 - `noto-jp` uses region-specific subset OpenType of Noto fonts, has less glyphs and image size as well.
 
 see [Noto CJK – Google Noto Fonts](https://www.google.com/get/noto/help/cjk/) for more information
