@@ -15,8 +15,6 @@ Docker image is available as [auchida/pandoc](https://hub.docker.com/r/auchida/p
 ## Image tags
 
 - `latest`, `base`
-- `noto-cjk-jp`
-- `noto-jp`
 
 ## Usage
 
@@ -33,33 +31,6 @@ $ docker run -v $PWD:/opt/docs auchida/pandoc pandoc -V documentclass=bxjsarticl
 ```
 
 About pandoc, consult [Pandoc - About pandoc](http://pandoc.org/) for more information.
-
-### For `noto-cjk-jp`
-
-
-```console
-$ docker run -v $PWD:/opt/docs auchida/pandoc:noto-cjk-jp pandoc -V documentclass=bxjsarticle -V classoption=pandoc,standard,jafont=noto-otf --pdf-engine=lualatex -o docs.pdf docs.md
-```
-
-or
-
-```console
-$ docker run -v $PWD:/opt/docs auchida/pandoc:noto-cjk-jp pandoc -V documentclass=bxjsarticle -V classoption=pandoc,standard,jafont=noto --pdf-engine=xelatex -o docs.pdf docs.md
-```
-
-If you want to use LuaLaTeX and ltjs classes, instead of bxjs classes, put `-H|--include-in-header` option with a following file:
-
-```latex
-\usepackage[noto-otf]{luatexja-preset}
-```
-
-### For `noto-jp`
-
-```console
-$ docker run -v $PWD:/opt/docs auchida/pandoc:noto-jp pandoc -V documentclass=bxjsarticle -V classoption=pandoc,standard,jafont=noto-jp --pdf-engine=xelatex -o docs.pdf docs.md
-```
-
-One may use `noto-jp` with LuaLaTeX by `-H|--include-in-header` option with `\set*jfont` commands in the `luatexja-fontspec` package.
 
 ## License
 
