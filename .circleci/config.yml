@@ -26,10 +26,7 @@ jobs:
           else
             tag="latest"
           fi
-          docker build -t "auchida/pandoc:base" .
-          for v in base noto-jp noto-cjk-jp; do
-            docker build -t "auchida/pandoc:${tag}-$v-<<parameters.arch>>" -f Dockerfile.$v .
-          done
+          docker build -t "auchida/pandoc:${tag}-base-<<parameters.arch>>" -f Dockerfile.base .
 
   build_push:
     machine:
@@ -46,16 +43,9 @@ jobs:
       - checkout
       - docker-login
       - run: |
-          if [ -n "<<pipeline.git.tag>>" ]; then
-            tag="<<pipeline.git.tag>>"
-          else
-            tag="latest"
-          fi
-          docker build -t "auchida/pandoc:base" .
-          for v in base noto-jp noto-cjk-jp; do
-            docker build -t "auchida/pandoc:${tag}-$v-<<parameters.arch>>" -f Dockerfile.$v .
-            docker push "auchida/pandoc:${tag}-$v-<<parameters.arch>>"
-          done
+          tag="<<pipeline.git.tag>>"
+          docker build -t "auchida/pandoc:${tag}-base-<<parameters.arch>>" .
+          docker push "auchida/pandoc:${tag}-base-<<parameters.arch>>"
 
   push_manifest:
     machine:
@@ -65,12 +55,10 @@ jobs:
       - docker-login
       - run: |
           tag="<<pipeline.git.tag>>"
-          for v in base noto-jp noto-cjk-jp; do
-            docker manifest create "auchida/pandoc:${tag}-$v" \
-              "auchida/pandoc:${tag}-$v-amd64" \
-              "auchida/pandoc:${tag}-$v-arm64"
-            docker manifest push "auchida/pandoc:${tag}-$v"
-          done
+          docker manifest create "auchida/pandoc:${tag}-base" \
+            "auchida/pandoc:${tag}-base-amd64" \
+            "auchida/pandoc:${tag}-base-arm64"
+          docker manifest push "auchida/pandoc:${tag}-base"
           docker manifest create "auchida/pandoc:latest" \
             "auchida/pandoc:${tag}-base-amd64" \
             "auchida/pandoc:${tag}-base-arm64"
