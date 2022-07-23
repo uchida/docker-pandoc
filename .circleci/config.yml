@@ -64,23 +64,17 @@ jobs:
       - checkout
       - docker-login
       - run: |
-          if [ -n "<<pipeline.git.tag>>" ]; then
-            tag="<<pipeline.git.tag>>"
-          else
-            tag="latest"
-          fi
+          tag="<<pipeline.git.tag>>"
           for v in base noto-jp noto-cjk-jp; do
             docker manifest create "auchida/pandoc:${tag}-$v" \
               "auchida/pandoc:${tag}-$v-amd64" \
               "auchida/pandoc:${tag}-$v-arm64"
             docker manifest push "auchida/pandoc:${tag}-$v"
           done
-          if [ $tag = "latest" ]; then
-            docker manifest create "auchida/pandoc:latest" \
-              "auchida/pandoc:${tag}-base-amd64" \
-              "auchida/pandoc:${tag}-base-arm64"
-            docker manifest push "auchida/pandoc:${tag}"
-          fi
+          docker manifest create "auchida/pandoc:latest" \
+            "auchida/pandoc:${tag}-base-amd64" \
+            "auchida/pandoc:${tag}-base-arm64"
+          docker manifest push "auchida/pandoc:latest"
 
 workflows:
   version: 2
