@@ -21,12 +21,7 @@ jobs:
       - checkout
       - docker-login
       - run: |
-          if [ -n "<<pipeline.git.tag>>" ]; then
-            tag="<<pipeline.git.tag>>"
-          else
-            tag="latest"
-          fi
-          docker build -t "auchida/pandoc:${tag}-base-<<parameters.arch>>" .
+          docker build -t "auchida/pandoc:latest-<<parameters.arch>>" .
 
   build_push:
     machine:
