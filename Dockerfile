@@ -1,4 +1,4 @@
-FROM auchida/texlive
+FROM auchida/texlive:2022
 RUN apt-get update\
   && apt-get install --no-install-recommends -y fontconfig=* fonts-ipaexfont=*\
   && rm -rf /var/lib/apt/lists/*\
